@@ -16,18 +16,3 @@ if (menuToggle && siteNav) {
     });
   });
 }
-
-const heroTitle = document.querySelector(".hero-title-only");
-
-if (heroTitle) {
-  const chars = heroTitle.textContent.trim().split("");
-  heroTitle.textContent = "";
-
-  chars.forEach((char, idx) => {
-    const span = document.createElement("span");
-    span.className = "hero-char";
-    span.style.animationDelay = `${0.06 * idx}s`;
-    span.textContent = char === " " ? "\u00A0" : char;
-    heroTitle.appendChild(span);
-  });
-}
