@@ -370,6 +370,20 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+#price {
+  background: #f7f9fc;
+  color: #111827;
+}
+
+#price .section-en {
+  color: #5f6d86;
+}
+
+#price .section-title,
+#price .plan-group-title {
+  color: #0f172a;
+}
+
 .plan-group {
   margin-top: 34px;
 }
@@ -412,17 +426,18 @@ h1 {
   margin-top: 8px;
   border-radius: 28px;
   overflow: hidden;
-  background: #eef3fb;
-  border: 1px solid rgba(164, 188, 240, 0.6);
-  box-shadow: 0 18px 50px rgba(2, 10, 26, 0.2);
+  background: #ffffff;
+  border: 1px solid #d9e1ee;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
 }
 
 .option-board-head {
   position: relative;
-  background: linear-gradient(135deg, #7d98e6, #7b96e0);
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
   padding: 34px 28px 22px;
   text-align: center;
-  color: #f6f8ff;
+  color: #0f172a;
 }
 
 .option-head-icon {
@@ -430,7 +445,7 @@ h1 {
   left: 24px;
   top: 14px;
   font-size: 24px;
-  opacity: 0.8;
+  opacity: 0.4;
 }
 
 .option-head-ja {
@@ -449,14 +464,14 @@ h1 {
 
 .option-board-body {
   padding: 34px 38px 32px;
-  color: #5c6580;
+  color: #334155;
 }
 
 .option-intro {
   margin: 0;
   text-align: center;
-  font-weight: 700;
-  color: #8a9fe5;
+  font-weight: 600;
+  color: #64748b;
   line-height: 1.9;
 }
 
@@ -473,7 +488,7 @@ h1 {
 }
 
 .option-column + .option-column {
-  border-left: 1px solid #aebfe9;
+  border-left: 1px solid #e2e8f0;
   padding-left: 26px;
 }
 
@@ -486,14 +501,14 @@ h1 {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #4f5b75;
+  color: #0f172a;
   font-size: 1.1rem;
 }
 
 .option-item h3::before {
   content: "◆";
   font-size: 0.7rem;
-  color: #93a9eb;
+  color: #111827;
 }
 
 .option-sublist {
@@ -506,7 +521,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  color: #5c6580;
+  color: #1f2937;
 }
 
 .option-sublist li + li {
@@ -517,7 +532,7 @@ h1 {
   display: block;
   margin-top: 6px;
   font-size: 0.92rem;
-  color: #7a829c;
+  color: #64748b;
 }
 
 .option-line {
@@ -528,7 +543,7 @@ h1 {
 .option-line strong {
   font-size: 1.9rem;
   font-family: "Noto Serif JP", serif;
-  color: #4f5b75;
+  color: #111827;
 }
 
 .option-item-row {
@@ -558,7 +573,7 @@ h1 {
 
 .option-detail {
   margin: 8px 0 0 20px;
-  color: #7a829c;
+  color: #64748b;
   font-size: 0.92rem;
 }
 
@@ -568,10 +583,11 @@ h1 {
 
 .price-card {
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: linear-gradient(170deg, rgba(19, 34, 56, 0.9), rgba(12, 22, 37, 0.92));
+  border: 1px solid #d9e1ee;
+  background: #ffffff;
+  color: #111827;
   padding: 26px;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
   transition:
     transform 0.25s ease,
     border-color 0.25s ease,
@@ -580,14 +596,14 @@ h1 {
 
 .price-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(121, 208, 255, 0.52);
-  box-shadow: var(--shadow);
+  border-color: #c5d0e3;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
 }
 
 .price-card.featured {
   transform: translateY(-8px);
-  border-color: rgba(110, 199, 255, 0.65);
-  box-shadow: var(--shadow);
+  border-color: #9aaacc;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.14);
   position: relative;
 }
 
@@ -600,8 +616,8 @@ h1 {
   border-radius: 999px;
   font-size: 0.68rem;
   letter-spacing: 0.08em;
-  color: #05203a;
-  background: linear-gradient(135deg, #a8e4ff, #72c7ff);
+  color: #111827;
+  background: #dbeafe;
 }
 
 .price-card h3 {
@@ -612,7 +628,7 @@ h1 {
   margin: 16px 0 8px;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
-  color: var(--accent-soft);
+  color: #334155;
 }
 
 .price-card h4:first-of-type {
@@ -628,12 +644,12 @@ h1 {
 .price-card ul {
   margin: 0;
   padding-left: 18px;
-  color: var(--text-muted);
+  color: #334155;
 }
 
 .note {
   margin: 22px 0 0;
-  color: var(--text-muted);
+  color: #475569;
   font-size: 0.9rem;
 }
 
@@ -765,7 +781,7 @@ h1 {
 
   .option-column + .option-column {
     border-left: 0;
-    border-top: 1px solid #aebfe9;
+    border-top: 1px solid #e2e8f0;
     padding-left: 0;
     padding-top: 18px;
   }
