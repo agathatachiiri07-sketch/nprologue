@@ -542,6 +542,20 @@ h1 {
   margin: 0;
 }
 
+.option-column .option-item-row {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option-column .option-item-row .option-line {
+  text-align: left;
+}
+
+.option-column .option-line strong {
+  font-size: 1.4rem;
+}
+
 .option-detail {
   margin: 8px 0 0 20px;
   color: #7a829c;
