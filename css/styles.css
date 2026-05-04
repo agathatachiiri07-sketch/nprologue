@@ -65,6 +65,13 @@ a {
   gap: 10px;
 }
 
+.logo-title {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  font-size: 1.12rem;
+  letter-spacing: 0.08em;
+}
+
 .logo-mark {
   width: 28px;
   height: 28px;
@@ -158,10 +165,18 @@ a {
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1.25fr 0.85fr;
-  gap: 44px;
-  padding: 96px 0 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 0 112px;
+  min-height: calc(100vh - 72px);
+  text-align: center;
+}
+
+.hero-title-only {
+  font-size: clamp(2.5rem, 10vw, 6rem);
+  letter-spacing: 0.08em;
+  margin: 0;
 }
 
 .eyebrow,
@@ -183,6 +198,10 @@ h1,
 h1 {
   font-size: clamp(2rem, 5vw, 3.2rem);
   text-shadow: 0 8px 28px rgba(3, 9, 20, 0.45);
+}
+
+.hero-copy {
+  width: 100%;
 }
 
 .lead {
@@ -790,6 +809,11 @@ h1 {
     max-width: 560px;
   }
 
+  .hero-grid {
+    min-height: calc(78vh - 72px);
+    padding: 88px 0;
+  }
+
   .hero-metrics {
     max-width: 100%;
   }
@@ -828,7 +852,8 @@ h1 {
   }
 
   .hero-grid {
-    padding-top: 50px;
+    min-height: calc(66vh - 72px);
+    padding: 72px 0;
   }
 
   h1 {
