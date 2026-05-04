@@ -150,7 +150,7 @@ a {
   inset: 0;
   background:
     linear-gradient(118deg, rgba(7, 13, 24, 0.94) 30%, rgba(7, 13, 24, 0.3)),
-    url("https://images.unsplash.com/photo-1527672809634-04ed36500acd?auto=format&fit=crop&w=1800&q=80")
+    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1800&q=80")
       center / cover no-repeat;
   z-index: -2;
 }
@@ -1078,7 +1078,7 @@ body {
 .hero::before {
   background:
     linear-gradient(120deg, rgba(246, 250, 255, 0.9), rgba(240, 246, 255, 0.78)),
-    url("https://images.unsplash.com/photo-1527672809634-04ed36500acd?auto=format&fit=crop&w=1800&q=80")
+    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1800&q=80")
       center / cover no-repeat;
 }
 
