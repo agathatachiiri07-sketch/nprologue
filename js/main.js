@@ -16,3 +16,105 @@ if (menuToggle && siteNav) {
     });
   });
 }
+
+const dotLogo = document.getElementById("dot-logo");
+
+if (dotLogo) {
+  const text = (dotLogo.dataset.text || "N.PROLOGUE").toUpperCase();
+
+  const patterns = {
+    N: [
+      [1, 0, 1],
+      [1, 1, 1],
+      [1, 0, 1],
+      [1, 1, 1],
+      [1, 0, 1],
+    ],
+    ".": [[1]],
+    P: [
+      [1, 1, 1, 0],
+      [1, 0, 0, 1],
+      [1, 1, 1, 0],
+      [1, 0, 0, 0],
+      [1, 0, 0, 0],
+    ],
+    R: [
+      [1, 1, 1, 0],
+      [1, 0, 0, 1],
+      [1, 1, 1, 0],
+      [1, 0, 1, 0],
+      [1, 0, 0, 1],
+    ],
+    O: [
+      [0, 1, 1, 0],
+      [1, 0, 0, 1],
+      [1, 0, 0, 1],
+      [1, 0, 0, 1],
+      [0, 1, 1, 0],
+    ],
+    L: [
+      [1, 0, 0],
+      [1, 0, 0],
+      [1, 0, 0],
+      [1, 0, 0],
+      [1, 1, 1],
+    ],
+    G: [
+      [0, 1, 1, 0],
+      [1, 0, 0, 1],
+      [1, 0, 1, 1],
+      [1, 0, 0, 1],
+      [0, 1, 1, 0],
+    ],
+    U: [
+      [1, 0, 1],
+      [1, 0, 1],
+      [1, 0, 1],
+      [1, 0, 1],
+      [0, 1, 0],
+    ],
+    E: [
+      [1, 1, 1],
+      [1, 0, 0],
+      [1, 1, 0],
+      [1, 0, 0],
+      [1, 1, 1],
+    ],
+  };
+
+  const buildLetter = (char) => {
+    const pattern = patterns[char];
+    if (!pattern) {
+      return null;
+    }
+
+    const letter = document.createElement("span");
+    letter.className = "dot-letter";
+    letter.style.setProperty("--w", String(pattern[0].length));
+    letter.style.setProperty("--h", String(pattern.length));
+
+    pattern.forEach((row, y) => {
+      row.forEach((cell, x) => {
+        if (!cell) {
+          return;
+        }
+        const dot = document.createElement("span");
+        dot.className = "dot";
+        dot.style.setProperty("--x", String(x));
+        dot.style.setProperty("--y", String(y));
+        letter.appendChild(dot);
+      });
+    });
+
+    return letter;
+  };
+
+  dotLogo.innerHTML = "";
+
+  [...text].forEach((char) => {
+    const letter = buildLetter(char);
+    if (letter) {
+      dotLogo.appendChild(letter);
+    }
+  });
+}
