@@ -110,11 +110,18 @@ if (dotLogo) {
   };
 
   dotLogo.innerHTML = "";
+  dotLogo.classList.add("is-typing");
 
-  [...text].forEach((char) => {
+  [...text].forEach((char, index) => {
     const letter = buildLetter(char);
     if (letter) {
+      letter.style.setProperty("--type-delay", `${index * 0.12}s`);
       dotLogo.appendChild(letter);
     }
   });
+
+  const typingDurationMs = text.length * 120 + 350;
+  window.setTimeout(() => {
+    dotLogo.classList.remove("is-typing");
+  }, typingDurationMs);
 }
