@@ -170,7 +170,7 @@ a {
   --dot-size: clamp(8px, 0.98vw, 14px);
   --dot-gap: clamp(6px, 0.65vw, 10px);
   display: flex;
-  gap: clamp(12px, 1.6vw, 18px);
+  gap: clamp(18px, 2.6vw, 32px);
   align-items: flex-start;
   justify-content: center;
   flex-wrap: nowrap;
@@ -1288,7 +1288,7 @@ h1 {
   .dot-logo {
     --dot-size: clamp(5px, 1.45vw, 8px);
     --dot-gap: clamp(4px, 0.95vw, 6px);
-    gap: clamp(6px, 1.2vw, 10px);
+    gap: clamp(9px, 1.9vw, 16px);
   }
 }
 
