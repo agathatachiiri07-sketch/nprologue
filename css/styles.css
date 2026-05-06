@@ -180,7 +180,7 @@ a {
 .dot-logo::after {
   content: "";
   width: clamp(4px, 0.5vw, 7px);
-  height: calc(var(--dot-size) * 4.6);
+  height: calc(var(--dot-size) * 5 + var(--dot-gap) * 4);
   margin-left: clamp(8px, 1vw, 14px);
   background: #111827;
   border-radius: 999px;
