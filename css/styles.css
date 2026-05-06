@@ -1284,86 +1284,77 @@ h1 {
   }
 }
 
-/* Full-site light visual theme overrides */
+/* Full-site black visual theme overrides */
 :root {
-  --bg: #f4f8ff;
-  --bg-deep: #eef4ff;
-  --bg-soft: #ffffff;
-  --bg-card: #ffffff;
-  --text: #0f172a;
-  --text-muted: #475569;
-  --line: #d7e0ee;
-  --accent: #6b8de3;
-  --accent-soft: #5f6d86;
-  --shadow: 0 18px 36px rgba(15, 23, 42, 0.1);
-  --shadow-soft: 0 10px 22px rgba(15, 23, 42, 0.08);
+  --bg: #000000;
+  --bg-deep: #000000;
+  --bg-soft: #000000;
+  --bg-card: #0b0b0f;
+  --text: #ffffff;
+  --text-muted: #b8bcc9;
+  --line: #2a2d37;
+  --accent: #9aa9ff;
+  --accent-soft: #c8d0ff;
+  --shadow: 0 18px 36px rgba(0, 0, 0, 0.45);
+  --shadow-soft: 0 10px 22px rgba(0, 0, 0, 0.32);
 }
 
 body {
   color: var(--text);
-  background:
-    radial-gradient(circle at 12% -8%, rgba(152, 178, 232, 0.2), transparent 35%),
-    radial-gradient(circle at 86% 6%, rgba(181, 204, 244, 0.26), transparent 42%),
-    linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+  background: #000000;
+}
+
+#price {
+  background: #000000;
+  color: #ffffff;
+}
+
+#price .section-en {
+  color: #c8d0ff;
+}
+
+#price .section-title,
+#price .plan-group-title {
+  color: #ffffff;
 }
 
 h1 {
-  color: #0f172a;
+  color: #ffffff;
   text-shadow: none;
 }
 
 .eyebrow,
 .section-en {
-  color: #5f6d86;
+  color: #c8d0ff;
 }
 
 .lead,
 .hero-copy .lead {
-  color: #475569;
-}
-
-.hero-metrics li {
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid #d9e2ef;
-}
-
-.hero-metrics strong {
-  color: #0f172a;
-}
-
-.hero-metrics span {
-  color: #475569;
+  color: #b8bcc9;
 }
 
 .btn {
-  background: #111827;
-  color: #ffffff;
-  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.16);
+  background: #ffffff;
+  color: #050505;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35);
 }
 
 .btn:hover {
-  box-shadow: 0 12px 20px rgba(15, 23, 42, 0.22);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.45);
 }
 
 .btn-ghost {
-  color: #111827;
-  background: #ffffff;
-  border-color: #cdd7e7;
-}
-
-.hero-card {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #d9e1ee;
-  color: #0f172a;
-  box-shadow: var(--shadow);
+  color: #ffffff;
+  background: transparent;
+  border-color: #3b3f4d;
 }
 
 .card-title {
-  color: #475569;
+  color: #b8bcc9;
 }
 
 .section-title {
-  color: #0f172a;
+  color: #ffffff;
 }
 
 .section-dark,
@@ -1371,85 +1362,92 @@ h1 {
   background: transparent;
 }
 
-.card {
-  background: #ffffff;
-  border: 1px solid #d9e1ee;
+.card,
+.price-card,
+.feature-list article,
+.flow li,
+.faq details,
+.contact-form,
+.option-board {
+  background: #0b0b0f;
+  border-color: #2a2d37;
   box-shadow: var(--shadow-soft);
+  color: #ffffff;
 }
 
-.card:hover {
-  border-color: #c5d0e3;
-  box-shadow: var(--shadow);
-}
-
-.card p {
-  color: #475569;
+.card p,
+.feature-list p,
+.faq p,
+.note,
+.price-card ul,
+.option-intro,
+.option-sublist li,
+.option-detail,
+.contact-form label {
+  color: #b8bcc9;
 }
 
 .feature-list article {
-  border-left: 3px solid #95a8d5;
-  background: #ffffff;
-  box-shadow: var(--shadow-soft);
+  border-left-color: #8f98bd;
 }
 
-.feature-list span {
-  color: #475569;
+.feature-list span,
+.flow strong,
+.price-card h4 {
+  color: #c8d0ff;
 }
 
-.feature-list p {
-  color: #475569;
+.option-board-head {
+  background: #111218;
+  border-bottom-color: #2a2d37;
+  color: #ffffff;
 }
 
-.flow li {
-  background: #ffffff;
-  border: 1px solid #d9e1ee;
-  box-shadow: var(--shadow-soft);
-  color: #1f2937;
+.option-board-body {
+  color: #ffffff;
 }
 
-.flow strong {
-  color: #475569;
+.option-item h3,
+.option-line strong {
+  color: #ffffff;
 }
 
-.faq details {
-  background: #ffffff;
-  border: 1px solid #d9e1ee;
-  box-shadow: var(--shadow-soft);
+.option-item h3::before {
+  color: #c8d0ff;
 }
 
-.faq p {
-  color: #475569;
+.option-column + .option-column {
+  border-left-color: #2a2d37;
 }
 
-.contact-form {
-  background: #ffffff;
-  border: 1px solid #d9e1ee;
-  box-shadow: var(--shadow);
+.price-card.featured {
+  border-color: #5f6b94;
 }
 
-.contact-form label {
-  color: #334155;
+.price-card.featured::before {
+  background: #1b1f2c;
+  color: #ffffff;
 }
 
 .contact-form input,
 .contact-form textarea {
-  background: #ffffff;
-  border-color: #c7d2e5;
-  color: #111827;
+  background: #000000;
+  border-color: #343844;
+  color: #ffffff;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #9db0d8;
-  box-shadow: 0 0 0 3px rgba(157, 176, 216, 0.22);
+  border-color: #8b96c0;
+  box-shadow: 0 0 0 3px rgba(139, 150, 192, 0.24);
 }
 
 .site-footer {
-  border-top: 1px solid #d9e1ee;
-  background: #f8fbff;
+  border-top: 1px solid #2a2d37;
+  background: #000000;
 }
 
 .footer-wrap {
-  color: #475569;
+  color: #b8bcc9;
 }
 
