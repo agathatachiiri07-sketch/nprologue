@@ -1,22 +1,3 @@
-const menuToggle = document.getElementById("menu-toggle");
-const siteNav = document.getElementById("site-nav");
-const navLinks = siteNav ? siteNav.querySelectorAll("a") : [];
-
-if (menuToggle && siteNav) {
-  menuToggle.addEventListener("click", () => {
-    siteNav.classList.toggle("open");
-    const isOpen = siteNav.classList.contains("open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-}
-
 const dotLogo = document.getElementById("dot-logo");
 
 if (dotLogo) {
@@ -131,3 +112,39 @@ if (dotLogo) {
 
   typeNext();
 }
+
+const revealTargets = document.querySelectorAll(
+  ".section .section-en, .section .section-title, .section .card, .section .price-card, .feature-list article, .flow li, .faq details, .contact-form, .option-board"
+);
+
+revealTargets.forEach((el, index) => {
+  el.classList.add("reveal");
+  if (el.matches(".card, .price-card")) {
+    el.classList.add("reveal-lift");
+  }
+  if (el.matches(".section-en")) {
+    el.classList.add("reveal-left", "reveal-fast");
+  }
+  if (el.matches(".section-title")) {
+    el.classList.add("reveal-right");
+  }
+  el.style.setProperty("--reveal-delay", `${(index % 6) * 70}ms`);
+});
+
+const observer = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+      entry.target.classList.add("is-visible");
+      obs.unobserve(entry.target);
+    });
+  },
+  {
+    threshold: 0.15,
+    rootMargin: "0px 0px -8% 0px",
+  }
+);
+
+revealTargets.forEach((el) => observer.observe(el));

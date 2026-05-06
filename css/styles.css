@@ -642,6 +642,45 @@ h1 {
   position: relative;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(28px) scale(0.985);
+  filter: blur(4px);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.75s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: transform, opacity, filter;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.reveal-lift {
+  transform: translateY(42px) scale(0.98);
+}
+
+.reveal-left {
+  transform: translateX(-28px) scale(0.99);
+}
+
+.reveal-right {
+  transform: translateX(28px) scale(0.99);
+}
+
+.reveal-fast {
+  transition-duration: 0.55s;
+}
+
+.parallax-soft {
+  transition: transform 0.25s linear;
+  will-change: transform;
+}
+
 .section-title {
   font-size: clamp(1.6rem, 3.5vw, 2.4rem);
   margin-bottom: 30px;
@@ -1234,6 +1273,14 @@ h1 {
     --dot-size: clamp(5px, 1.45vw, 8px);
     --dot-gap: clamp(4px, 0.95vw, 6px);
     gap: clamp(9px, 1.9vw, 16px);
+  }
+
+  .reveal,
+  .reveal-lift,
+  .reveal-left,
+  .reveal-right {
+    transform: translateY(22px);
+    filter: blur(2px);
   }
 }
 
