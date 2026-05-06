@@ -66,14 +66,17 @@ a {
   top: clamp(22px, 3.6vw, 40px);
   right: clamp(20px, 3.5vw, 48px);
   margin: 0;
-  padding: 10px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  font-family: "Noto Serif JP", serif;
-  letter-spacing: 0.08em;
-  font-size: 0.92rem;
+  width: 26px;
+  display: grid;
+  gap: 8px;
+}
+
+.hero-side-logo-line {
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: 999px;
+  background: #ffffff;
 }
 
 .sr-only {
@@ -1148,6 +1151,8 @@ h1 {
   .hero-side-logo {
     top: 18px;
     right: 18px;
+    width: 24px;
+    gap: 7px;
   }
 
   .hero-metrics {
@@ -1173,8 +1178,8 @@ h1 {
   .hero-side-logo {
     top: 12px;
     right: 12px;
-    padding: 8px 10px;
-    font-size: 0.74rem;
+    width: 22px;
+    gap: 6px;
   }
 
   h1 {
