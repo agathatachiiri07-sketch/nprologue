@@ -112,15 +112,18 @@ if (dotLogo) {
   dotLogo.innerHTML = "";
   dotLogo.classList.add("is-typing");
 
+  const typingStepMs = 220;
+  const typingStepSec = typingStepMs / 1000;
+
   [...text].forEach((char, index) => {
     const letter = buildLetter(char);
     if (letter) {
-      letter.style.setProperty("--type-delay", `${index * 0.12}s`);
+      letter.style.setProperty("--type-delay", `${index * typingStepSec}s`);
       dotLogo.appendChild(letter);
     }
   });
 
-  const typingDurationMs = text.length * 120 + 350;
+  const typingDurationMs = text.length * typingStepMs + 450;
   window.setTimeout(() => {
     dotLogo.classList.remove("is-typing");
   }, typingDurationMs);
