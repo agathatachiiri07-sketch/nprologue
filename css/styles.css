@@ -142,7 +142,7 @@ a {
   display: grid;
   align-items: center;
   overflow: hidden;
-  background: #ffffff;
+  background: #000000;
 }
 
 .hero-grid {
@@ -182,7 +182,7 @@ a {
   width: clamp(4px, 0.5vw, 7px);
   height: calc(var(--dot-size) * 5 + var(--dot-gap) * 4);
   margin-left: clamp(8px, 1vw, 14px);
-  background: #111827;
+  background: #ffffff;
   border-radius: 999px;
   align-self: flex-end;
   opacity: 0;
@@ -204,7 +204,7 @@ a {
   width: var(--dot-size);
   height: var(--dot-size);
   border-radius: 999px;
-  background: #111827;
+  background: #ffffff;
   left: calc(var(--x) * (var(--dot-size) + var(--dot-gap)));
   top: calc(var(--y) * (var(--dot-size) + var(--dot-gap)));
 }
