@@ -524,7 +524,7 @@ a {
 h1,
 .section-title {
   margin: 0;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
   line-height: 1.35;
   letter-spacing: 0.03em;
 }
@@ -567,7 +567,7 @@ h1 {
 
 .hero-metrics strong {
   display: block;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 1.1rem;
   color: var(--accent-soft);
 }
@@ -744,7 +744,7 @@ h1 {
 
 .feature-list span {
   color: var(--accent);
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .feature-list h3 {
@@ -786,7 +786,7 @@ h1 {
 
 .plan-group-title {
   margin: 0 0 14px;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 1.3rem;
 }
 
@@ -842,7 +842,7 @@ h1 {
 
 .option-head-ja {
   margin: 0;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 2rem;
   letter-spacing: 0.08em;
 }
@@ -934,7 +934,7 @@ h1 {
 
 .option-line strong {
   font-size: 1.9rem;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
   color: #111827;
 }
 
@@ -1030,7 +1030,7 @@ h1 {
 .price {
   font-size: 1.85rem;
   margin: 12px 0 18px;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .price-card ul {
@@ -1067,7 +1067,7 @@ h1 {
 .flow strong {
   width: 52px;
   color: var(--accent);
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .section-soft {
