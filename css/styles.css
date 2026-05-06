@@ -1105,6 +1105,11 @@ h1 {
   grid-template-columns: 1fr 1fr;
 }
 
+.contact .section-title {
+  font-size: clamp(1.15rem, 2.3vw, 1.9rem);
+  white-space: nowrap;
+}
+
 .contact-form {
   background: linear-gradient(170deg, rgba(20, 36, 60, 0.9), rgba(13, 24, 40, 0.92));
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -1267,6 +1272,10 @@ h1 {
 
   .option-line strong {
     font-size: 1.4rem;
+  }
+
+  .contact .section-title {
+    font-size: 1.1rem;
   }
 
   .dot-logo {
