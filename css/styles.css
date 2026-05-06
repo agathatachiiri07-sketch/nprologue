@@ -61,24 +61,6 @@ a {
   text-align: center;
 }
 
-.hero-side-logo {
-  position: absolute;
-  top: clamp(22px, 3.6vw, 40px);
-  right: clamp(20px, 3.5vw, 48px);
-  margin: 0;
-  width: 26px;
-  display: grid;
-  gap: 8px;
-}
-
-.hero-side-logo-line {
-  display: block;
-  height: 3px;
-  width: 100%;
-  border-radius: 999px;
-  background: #ffffff;
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -524,7 +506,7 @@ a {
 h1,
 .section-title {
   margin: 0;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
   line-height: 1.35;
   letter-spacing: 0.03em;
 }
@@ -567,7 +549,7 @@ h1 {
 
 .hero-metrics strong {
   display: block;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 1.1rem;
   color: var(--accent-soft);
 }
@@ -744,7 +726,7 @@ h1 {
 
 .feature-list span {
   color: var(--accent);
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .feature-list h3 {
@@ -786,7 +768,7 @@ h1 {
 
 .plan-group-title {
   margin: 0 0 14px;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 1.3rem;
 }
 
@@ -842,7 +824,7 @@ h1 {
 
 .option-head-ja {
   margin: 0;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 2rem;
   letter-spacing: 0.08em;
 }
@@ -934,7 +916,7 @@ h1 {
 
 .option-line strong {
   font-size: 1.9rem;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
   color: #111827;
 }
 
@@ -1030,7 +1012,7 @@ h1 {
 .price {
   font-size: 1.85rem;
   margin: 12px 0 18px;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .price-card ul {
@@ -1067,7 +1049,7 @@ h1 {
 .flow strong {
   width: 52px;
   color: var(--accent);
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .section-soft {
@@ -1103,6 +1085,11 @@ h1 {
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr 1fr;
+}
+
+.contact .section-title {
+  font-size: clamp(1.15rem, 2.3vw, 1.9rem);
+  white-space: nowrap;
 }
 
 .contact-form {
@@ -1187,13 +1174,6 @@ h1 {
     padding: 80px 0;
   }
 
-  .hero-side-logo {
-    top: 18px;
-    right: 18px;
-    width: 24px;
-    gap: 7px;
-  }
-
   .hero-metrics {
     max-width: 100%;
   }
@@ -1212,13 +1192,6 @@ h1 {
   .hero-grid {
     min-height: 66vh;
     padding: 64px 0;
-  }
-
-  .hero-side-logo {
-    top: 12px;
-    right: 12px;
-    width: 22px;
-    gap: 6px;
   }
 
   h1 {
@@ -1267,6 +1240,10 @@ h1 {
 
   .option-line strong {
     font-size: 1.4rem;
+  }
+
+  .contact .section-title {
+    font-size: 1.1rem;
   }
 
   .dot-logo {
