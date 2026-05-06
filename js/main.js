@@ -113,18 +113,21 @@ if (dotLogo) {
   dotLogo.classList.add("is-typing");
 
   const typingStepMs = 220;
-  const typingStepSec = typingStepMs / 1000;
+  const letters = [...text]
+    .map((char) => buildLetter(char))
+    .filter((letter) => letter !== null);
+  let currentIndex = 0;
 
-  [...text].forEach((char, index) => {
-    const letter = buildLetter(char);
-    if (letter) {
-      letter.style.setProperty("--type-delay", `${index * typingStepSec}s`);
-      dotLogo.appendChild(letter);
+  const typeNext = () => {
+    if (currentIndex >= letters.length) {
+      dotLogo.classList.remove("is-typing");
+      return;
     }
-  });
 
-  const typingDurationMs = text.length * typingStepMs + 450;
-  window.setTimeout(() => {
-    dotLogo.classList.remove("is-typing");
-  }, typingDurationMs);
+    dotLogo.appendChild(letters[currentIndex]);
+    currentIndex += 1;
+    window.setTimeout(typeNext, typingStepMs);
+  };
+
+  typeNext();
 }
