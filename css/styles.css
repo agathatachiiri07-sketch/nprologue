@@ -74,6 +74,7 @@ a {
   align-items: center;
   opacity: 0;
   transform: translateY(28px);
+  pointer-events: none;
   transition:
     opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.12s,
     transform 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.12s;
@@ -81,14 +82,18 @@ a {
 
 .hero.is-revealed .hero-intro {
   opacity: 0;
+  visibility: hidden;
   transform: scale(0.94) translateY(-16px);
   filter: blur(8px);
   pointer-events: none;
+  z-index: 0;
 }
 
 .hero.is-revealed .hero-content {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
+  z-index: 3;
 }
 
 .hero-reveal-item {
@@ -198,6 +203,8 @@ a {
 }
 
 .btn-hero {
+  position: relative;
+  z-index: 1;
   margin-top: 36px;
   padding: 14px 30px;
   border-radius: 0;
