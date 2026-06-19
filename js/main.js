@@ -1,4 +1,18 @@
 const dotLogo = document.getElementById("dot-logo");
+const hero = document.getElementById("hero");
+const heroContent = document.getElementById("hero-content");
+
+const revealHero = () => {
+  if (!hero) {
+    return;
+  }
+
+  hero.classList.add("is-revealed");
+
+  if (heroContent) {
+    heroContent.setAttribute("aria-hidden", "false");
+  }
+};
 
 if (dotLogo) {
   const text = (dotLogo.dataset.text || "N.PROLOGUE").toUpperCase();
@@ -102,6 +116,7 @@ if (dotLogo) {
   const typeNext = () => {
     if (currentIndex >= letters.length) {
       dotLogo.classList.remove("is-typing");
+      window.setTimeout(revealHero, 750);
       return;
     }
 
@@ -111,6 +126,8 @@ if (dotLogo) {
   };
 
   typeNext();
+} else {
+  revealHero();
 }
 
 const revealTargets = document.querySelectorAll(
