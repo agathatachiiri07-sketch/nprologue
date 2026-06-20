@@ -116,7 +116,7 @@ if (dotLogo) {
   const typeNext = () => {
     if (currentIndex >= letters.length) {
       dotLogo.classList.remove("is-typing");
-      window.setTimeout(revealHero, 750);
+      window.setTimeout(revealHero, 380);
       return;
     }
 

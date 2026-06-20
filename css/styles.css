@@ -66,9 +66,10 @@ a {
   justify-content: center;
   padding: 96px 0;
   transition:
-    opacity 1.15s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 1.15s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.95s ease;
+    opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.45s ease,
+    visibility 0s linear 0.55s;
 }
 
 .hero-content {
@@ -78,37 +79,37 @@ a {
   display: flex;
   align-items: center;
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(48px) scale(0.96);
   pointer-events: none;
   transition:
-    opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.12s,
-    transform 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.12s;
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.06s,
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.06s;
 }
 
 .hero.is-revealed .hero-intro {
   opacity: 0;
   visibility: hidden;
-  transform: scale(0.94) translateY(-16px);
-  filter: blur(8px);
+  transform: scale(0.86) translateY(-28px);
+  filter: blur(14px);
   pointer-events: none;
   z-index: 0;
 }
 
 .hero.is-revealed .hero-content {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
   pointer-events: auto;
   z-index: 3;
 }
 
 .hero-reveal-item {
   opacity: 0;
-  transform: translateY(22px);
-  filter: blur(3px);
+  transform: translateY(36px);
+  filter: blur(4px);
   transition:
-    opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.85s ease;
+    opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.45s ease;
 }
 
 .hero.is-revealed .hero-reveal-item {
@@ -118,19 +119,19 @@ a {
 }
 
 .hero.is-revealed .hero-reveal-item:nth-child(1) {
-  transition-delay: 0.42s;
+  transition-delay: 0.18s;
 }
 
 .hero.is-revealed .hero-reveal-item:nth-child(2) {
-  transition-delay: 0.56s;
+  transition-delay: 0.28s;
 }
 
 .hero.is-revealed .hero-reveal-item:nth-child(3) {
-  transition-delay: 0.7s;
+  transition-delay: 0.38s;
 }
 
 .hero.is-revealed .hero-reveal-item:nth-child(4) {
-  transition-delay: 0.84s;
+  transition-delay: 0.48s;
 }
 
 .hero-bg-circles {
@@ -145,10 +146,10 @@ a {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.06);
   opacity: 0;
-  transform: scale(0.92);
+  transform: scale(0.88);
   transition:
-    opacity 1.4s ease 0.2s,
-    transform 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+    opacity 0.75s ease 0.08s,
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.08s;
 }
 
 .hero.is-revealed .hero-circle {
@@ -157,52 +158,57 @@ a {
 }
 
 .hero-circle--tl {
-  width: clamp(260px, 40vw, 500px);
-  height: clamp(260px, 40vw, 500px);
-  top: -16%;
-  left: -10%;
+  width: clamp(300px, 46vw, 580px);
+  height: clamp(300px, 46vw, 580px);
+  top: -18%;
+  left: -12%;
 }
 
 .hero-circle--br {
-  width: clamp(340px, 52vw, 660px);
-  height: clamp(340px, 52vw, 660px);
-  bottom: -26%;
-  right: -12%;
+  width: clamp(380px, 58vw, 720px);
+  height: clamp(380px, 58vw, 720px);
+  bottom: -28%;
+  right: -14%;
 }
 
 .hero-copy-wrap {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 760px;
-  padding: clamp(96px, 12vw, 140px) 0;
+  max-width: 960px;
+  padding: clamp(110px, 14vw, 168px) 0;
   text-align: left;
 }
 
 .hero-eyebrow {
-  margin: 0 0 22px;
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.28em;
+  margin: 0 0 28px;
+  font-size: clamp(0.78rem, 1.2vw, 0.92rem);
+  font-weight: 600;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
   color: #8c8c8c;
+}
+
+.hero-accent {
+  color: #9ca3af;
+  font-weight: 700;
 }
 
 .hero-headline {
   margin: 0;
   font-family: "Playfair Display", "Noto Serif JP", serif;
-  font-size: clamp(2.35rem, 5.4vw, 4rem);
+  font-size: clamp(2.85rem, 7vw, 5.25rem);
   font-weight: 700;
-  line-height: 1.18;
+  line-height: 1.12;
   letter-spacing: 0.01em;
   color: #2a2a2a;
   text-shadow: none;
 }
 
 .hero-lead {
-  margin: 28px 0 0;
-  max-width: 34rem;
-  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  margin: 36px 0 0;
+  max-width: 40rem;
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
   line-height: 1.85;
   color: #8c8c8c;
 }
@@ -210,13 +216,13 @@ a {
 .btn-hero {
   position: relative;
   z-index: 1;
-  margin-top: 36px;
-  padding: 14px 30px;
+  margin-top: 44px;
+  padding: 16px 36px;
   border-radius: 0;
   background: #6d7d96;
   color: #ffffff;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
   letter-spacing: 0.02em;
   box-shadow: none;
 }
@@ -1958,6 +1964,11 @@ h1 {
 .hero-copy .lead,
 .hero-lead {
   color: var(--subtext);
+}
+
+.hero-accent {
+  color: #9ca3af;
+  font-weight: 700;
 }
 
 .btn {
