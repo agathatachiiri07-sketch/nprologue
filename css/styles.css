@@ -1,14 +1,16 @@
 :root {
-  --bg: #545454;
-  --bg-deep: #545454;
-  --bg-soft: #545454;
-  --bg-card: #f4f4f4;
+  --bg: #f4f4f4;
+  --bg-deep: #f4f4f4;
+  --bg-soft: #f4f4f4;
+  --bg-card: #545454;
   --title: #2a2a2a;
   --subtext: #8c8c8c;
-  --text-box: #f4f4f4;
+  --text-box: #545454;
+  --box-title: #f4f4f4;
+  --box-subtext: #8c8c8c;
   --text: #2a2a2a;
   --text-muted: #8c8c8c;
-  --line: #2a3b59;
+  --line: #6a6a6a;
   --accent: #79d0ff;
   --accent-soft: #b5e6ff;
   --radius: 20px;
@@ -27,8 +29,8 @@ html {
 
 body {
   margin: 0;
-  color: var(--text);
-  background: #545454;
+  color: var(--subtext);
+  background: #f4f4f4;
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.7;
 }
@@ -47,7 +49,7 @@ a {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background: #545454;
+  background: #f4f4f4;
 }
 
 .hero-stage {
@@ -141,7 +143,7 @@ a {
 .hero-circle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.06);
   opacity: 0;
   transform: scale(0.92);
   transition:
@@ -280,7 +282,7 @@ a {
   width: clamp(4px, 0.5vw, 7px);
   height: calc(var(--dot-size) * 5 + var(--dot-gap) * 4);
   margin-left: clamp(8px, 1vw, 14px);
-  background: #ffffff;
+  background: #2a2a2a;
   border-radius: 999px;
   align-self: flex-end;
   opacity: 0;
@@ -302,7 +304,7 @@ a {
   width: var(--dot-size);
   height: var(--dot-size);
   border-radius: 999px;
-  background: #ffffff;
+  background: #2a2a2a;
   left: calc(var(--x) * (var(--dot-size) + var(--dot-gap)));
   top: calc(var(--y) * (var(--dot-size) + var(--dot-gap)));
 }
@@ -873,7 +875,7 @@ h1 {
   padding: 28px;
   border-radius: var(--radius-sm);
   background: var(--text-box);
-  border: 1px solid #e0e0e0;
+  border: 1px solid #6a6a6a;
   box-shadow: var(--shadow-soft);
   transition:
     transform 0.25s ease,
@@ -883,26 +885,26 @@ h1 {
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: #bdbdbd;
+  border-color: #8c8c8c;
   box-shadow: var(--shadow);
 }
 
 .card h3 {
   margin-top: 0;
   font-size: 1.15rem;
-  color: var(--title);
+  color: var(--box-title);
 }
 
 .card p {
   margin-bottom: 0;
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .global-connect {
   margin-top: clamp(56px, 8vw, 84px);
   padding: clamp(48px, 7vw, 72px) clamp(20px, 4vw, 36px);
   text-align: center;
-  background: #f4f4f4;
+  background: #545454;
   border-radius: 6px;
 }
 
@@ -914,7 +916,7 @@ h1 {
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: 0.02em;
-  color: #2a2a2a;
+  color: #f4f4f4;
 }
 
 .global-connect-map {
@@ -959,7 +961,7 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #2a2a2a;
+  color: #f4f4f4;
 }
 
 .global-connect-label--sub {
@@ -980,7 +982,7 @@ h1 {
   display: block;
   width: 100%;
   height: 0;
-  border-top: 2px dashed #8c8c8c;
+  border-top: 2px dashed #b0b0b0;
   transform: rotate(4deg);
   transform-origin: center;
 }
@@ -992,28 +994,26 @@ h1 {
   transform: translateX(-50%);
   font-size: clamp(0.95rem, 1.8vw, 1.15rem);
   line-height: 1;
-  color: #8c8c8c;
+  color: #b0b0b0;
 }
 
 .global-connect-note {
   margin: clamp(40px, 5vw, 56px) auto 0;
   max-width: 100%;
   padding: clamp(20px, 3vw, 28px) clamp(18px, 3vw, 32px);
-  border: 1px solid #2a2a2a;
+  border: 1px solid #8c8c8c;
   border-radius: 0;
-  background: #f4f4f4;
+  background: #545454;
   font-family: "Noto Sans JP", sans-serif;
   font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 700;
   line-height: 1.8;
   letter-spacing: 0.01em;
-  color: #2a2a2a;
+  color: #f4f4f4;
 }
 
 .section-dark {
-  background:
-    radial-gradient(circle at 84% 30%, rgba(99, 162, 226, 0.14), transparent 45%),
-    linear-gradient(180deg, rgba(8, 14, 24, 0.96), rgba(9, 16, 28, 1));
+  background: transparent;
 }
 
 .feature-list {
@@ -1022,7 +1022,7 @@ h1 {
 }
 
 .feature-list article {
-  border-left: 3px solid #bdbdbd;
+  border-left: 3px solid #8c8c8c;
   background: var(--text-box);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   padding: 20px 22px;
@@ -1030,18 +1030,18 @@ h1 {
 }
 
 .feature-list span {
-  color: var(--subtext);
+  color: var(--box-subtext);
   font-family: "Noto Serif JP", serif;
 }
 
 .feature-list h3 {
   margin: 8px 0;
-  color: var(--title);
+  color: var(--box-title);
 }
 
 .feature-list p {
   margin: 0;
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .pricing {
@@ -1051,7 +1051,7 @@ h1 {
 }
 
 #price {
-  background: #545454;
+  background: #f4f4f4;
   color: var(--subtext);
 }
 
@@ -1088,7 +1088,7 @@ h1 {
 .plan-meta {
   margin-top: 14px;
   padding-top: 14px;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #6a6a6a;
 }
 
 .plan-meta h4 {
@@ -1108,17 +1108,17 @@ h1 {
   border-radius: 28px;
   overflow: hidden;
   background: var(--text-box);
-  border: 1px solid #e0e0e0;
+  border: 1px solid #6a6a6a;
   box-shadow: var(--shadow-soft);
 }
 
 .option-board-head {
   position: relative;
   background: var(--text-box);
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #6a6a6a;
   padding: 34px 28px 22px;
   text-align: center;
-  color: var(--title);
+  color: var(--box-title);
 }
 
 .option-head-icon {
@@ -1134,7 +1134,7 @@ h1 {
   font-family: "Noto Serif JP", serif;
   font-size: 2rem;
   letter-spacing: 0.08em;
-  color: var(--title);
+  color: var(--box-title);
 }
 
 .option-head-en {
@@ -1142,19 +1142,19 @@ h1 {
   font-size: 0.9rem;
   letter-spacing: 0.3em;
   font-weight: 700;
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .option-board-body {
   padding: 34px 38px 32px;
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .option-intro {
   margin: 0;
   text-align: center;
   font-weight: 600;
-  color: var(--subtext);
+  color: var(--box-subtext);
   line-height: 1.9;
 }
 
@@ -1171,7 +1171,7 @@ h1 {
 }
 
 .option-column + .option-column {
-  border-left: 1px solid #e0e0e0;
+  border-left: 1px solid #6a6a6a;
   padding-left: 26px;
 }
 
@@ -1184,14 +1184,14 @@ h1 {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--title);
+  color: var(--box-title);
   font-size: 1.1rem;
 }
 
 .option-item h3::before {
   content: "◆";
   font-size: 0.7rem;
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .option-sublist {
@@ -1204,7 +1204,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .option-sublist li + li {
@@ -1215,7 +1215,7 @@ h1 {
   display: block;
   margin-top: 6px;
   font-size: 0.92rem;
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .option-line {
@@ -1226,7 +1226,7 @@ h1 {
 .option-line strong {
   font-size: 1.9rem;
   font-family: "Noto Serif JP", serif;
-  color: var(--title);
+  color: var(--box-title);
 }
 
 .option-item-row {
@@ -1256,7 +1256,7 @@ h1 {
 
 .option-detail {
   margin: 8px 0 0 20px;
-  color: var(--subtext);
+  color: var(--box-subtext);
   font-size: 0.92rem;
 }
 
@@ -1266,9 +1266,9 @@ h1 {
 
 .price-card {
   border-radius: var(--radius-sm);
-  border: 1px solid #e0e0e0;
+  border: 1px solid #6a6a6a;
   background: var(--text-box);
-  color: var(--title);
+  color: var(--box-title);
   padding: 26px;
   box-shadow: var(--shadow-soft);
   transition:
@@ -1279,14 +1279,14 @@ h1 {
 
 .price-card:hover {
   transform: translateY(-4px);
-  border-color: #bdbdbd;
+  border-color: #8c8c8c;
   box-shadow: var(--shadow);
 }
 
 .price-card.featured {
   position: relative;
   transform: translateY(-8px);
-  border-color: #bdbdbd;
+  border-color: #8c8c8c;
   box-shadow: var(--shadow);
 }
 
@@ -1301,19 +1301,19 @@ h1 {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: var(--title);
-  background: #e8e8e8;
+  color: #2a2a2a;
+  background: #f4f4f4;
 }
 
 .price-card h3 {
-  color: var(--title);
+  color: var(--box-title);
 }
 
 .price-card h4 {
   margin: 18px 0 8px;
   font-size: 0.86rem;
   letter-spacing: 0.08em;
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .price-card h4:first-of-type {
@@ -1324,13 +1324,13 @@ h1 {
   margin: 10px 0 0;
   font-family: "Noto Serif JP", serif;
   font-size: 1.8rem;
-  color: var(--title);
+  color: var(--box-title);
 }
 
 .price-card ul {
   margin: 0;
   padding-left: 1.1em;
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .note {
@@ -1353,21 +1353,24 @@ h1 {
   gap: 18px;
   background: var(--text-box);
   border-radius: 10px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #6a6a6a;
   padding: 17px 20px;
   box-shadow: var(--shadow-soft);
+  color: var(--box-subtext);
 }
 
 .flow strong {
   width: 52px;
-  color: var(--subtext);
+  color: var(--box-subtext);
   font-family: "Noto Serif JP", serif;
 }
 
+.section-dark {
+  background: transparent;
+}
+
 .section-soft {
-  background:
-    radial-gradient(circle at 20% 20%, rgba(69, 128, 193, 0.14), transparent 40%),
-    linear-gradient(180deg, rgba(13, 23, 38, 0.94), rgba(7, 13, 23, 0.96));
+  background: transparent;
 }
 
 .faq {
@@ -1379,19 +1382,19 @@ h1 {
   border-radius: 10px;
   padding: 14px 16px;
   background: var(--text-box);
-  border: 1px solid #e0e0e0;
+  border: 1px solid #6a6a6a;
   box-shadow: var(--shadow-soft);
 }
 
 .faq summary {
   cursor: pointer;
   font-weight: 700;
-  color: var(--title);
+  color: var(--box-title);
 }
 
 .faq p {
   margin-bottom: 0;
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .contact-grid {
@@ -1402,7 +1405,7 @@ h1 {
 
 .contact-form {
   background: var(--text-box);
-  border: 1px solid #e0e0e0;
+  border: 1px solid #6a6a6a;
   border-radius: var(--radius);
   padding: 26px;
   box-shadow: var(--shadow);
@@ -1413,16 +1416,16 @@ h1 {
   gap: 8px;
   margin-bottom: 14px;
   font-size: 0.9rem;
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  border: 1px solid #d0d0d0;
+  border: 1px solid #6a6a6a;
   border-radius: 8px;
-  background: var(--text-box);
-  color: var(--title);
+  background: #4a4a4a;
+  color: var(--box-title);
   font: inherit;
   padding: 10px 12px;
   transition:
@@ -1438,9 +1441,9 @@ h1 {
 }
 
 .site-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid #d0d0d0;
   padding: 26px 0;
-  background: #545454;
+  background: #f4f4f4;
 }
 
 .footer-wrap {
@@ -1618,16 +1621,18 @@ h1 {
 
 /* Full-site visual theme overrides */
 :root {
-  --bg: #545454;
-  --bg-deep: #545454;
-  --bg-soft: #545454;
-  --bg-card: #f4f4f4;
+  --bg: #f4f4f4;
+  --bg-deep: #f4f4f4;
+  --bg-soft: #f4f4f4;
+  --bg-card: #545454;
   --title: #2a2a2a;
   --subtext: #8c8c8c;
-  --text-box: #f4f4f4;
+  --text-box: #545454;
+  --box-title: #f4f4f4;
+  --box-subtext: #8c8c8c;
   --text: #2a2a2a;
   --text-muted: #8c8c8c;
-  --line: #d8d8d8;
+  --line: #6a6a6a;
   --accent: #6d7d96;
   --accent-soft: #8c8c8c;
   --shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
@@ -1636,11 +1641,11 @@ h1 {
 
 body {
   color: var(--subtext);
-  background: #545454;
+  background: #f4f4f4;
 }
 
 #price {
-  background: #545454;
+  background: #f4f4f4;
   color: var(--subtext);
 }
 
@@ -1653,18 +1658,9 @@ body {
   color: var(--title);
 }
 
-h1,
-h2,
-h3,
 .section-title,
 .plan-group-title,
-.hero-headline,
-.card h3,
-.price-card h3,
-.feature-list h3,
-.option-item h3,
-.option-line strong,
-.faq summary {
+.hero-headline {
   color: var(--title);
 }
 
@@ -1712,7 +1708,7 @@ h1 {
 }
 
 .card-title {
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .section-dark,
@@ -1728,9 +1724,19 @@ h1 {
 .contact-form,
 .option-board {
   background: var(--text-box);
-  border-color: #e0e0e0;
+  border-color: #6a6a6a;
   box-shadow: var(--shadow-soft);
-  color: var(--title);
+  color: var(--box-title);
+}
+
+.card h3,
+.price-card h3,
+.feature-list h3,
+.option-item h3,
+.option-line strong,
+.faq summary,
+.option-head-ja {
+  color: var(--box-title);
 }
 
 .card p,
@@ -1743,57 +1749,60 @@ h1 {
 .option-detail,
 .contact-form label,
 .plan-subnote,
-.plan-meta p,
+.plan-meta p {
+  color: var(--box-subtext);
+}
+
 .footer-wrap {
   color: var(--subtext);
 }
 
 .feature-list article {
-  border-left-color: #bdbdbd;
+  border-left-color: #8c8c8c;
 }
 
 .feature-list span,
 .flow strong,
 .price-card h4 {
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .option-board-head {
   background: var(--text-box);
-  border-bottom-color: #e0e0e0;
-  color: var(--title);
+  border-bottom-color: #6a6a6a;
+  color: var(--box-title);
 }
 
 .option-board-body {
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .option-item h3::before {
-  color: var(--subtext);
+  color: var(--box-subtext);
 }
 
 .option-column + .option-column {
-  border-left-color: #e0e0e0;
+  border-left-color: #6a6a6a;
 }
 
 .price-card.featured {
-  border-color: #bdbdbd;
+  border-color: #8c8c8c;
 }
 
 .price-card.featured::before {
-  background: #e8e8e8;
-  color: var(--title);
+  background: #f4f4f4;
+  color: #2a2a2a;
 }
 
 .price-card .price {
-  color: var(--title);
+  color: var(--box-title);
 }
 
 .contact-form input,
 .contact-form textarea {
-  background: var(--text-box);
-  border-color: #d0d0d0;
-  color: var(--title);
+  background: #4a4a4a;
+  border-color: #6a6a6a;
+  color: var(--box-title);
 }
 
 .contact-form input:focus,
@@ -1803,7 +1812,7 @@ h1 {
 }
 
 .site-footer {
-  border-top: 1px solid #6a6a6a;
-  background: #545454;
+  border-top: 1px solid #d0d0d0;
+  background: #f4f4f4;
 }
 
