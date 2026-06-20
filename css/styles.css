@@ -901,11 +901,15 @@ h1 {
 }
 
 .global-connect {
+  width: 100%;
   margin-top: clamp(56px, 8vw, 84px);
-  padding: clamp(48px, 7vw, 72px) clamp(20px, 4vw, 36px);
+  padding: clamp(48px, 7vw, 72px) 0;
   text-align: center;
   background: #545454;
-  border-radius: 6px;
+}
+
+.global-connect-inner {
+  width: min(1120px, 92%);
 }
 
 .global-connect-title {
@@ -998,8 +1002,8 @@ h1 {
 }
 
 .global-connect-note {
-  margin: clamp(40px, 5vw, 56px) auto 0;
-  max-width: 100%;
+  margin: clamp(40px, 5vw, 56px) 0 0;
+  width: 100%;
   padding: clamp(20px, 3vw, 28px) clamp(18px, 3vw, 32px);
   border: 1px solid #8c8c8c;
   border-radius: 0;
@@ -1791,7 +1795,7 @@ h1 {
   }
 
   .global-connect {
-    padding: 36px 16px;
+    padding: 36px 0;
   }
 
   .global-connect-map {
