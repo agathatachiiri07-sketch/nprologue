@@ -6,8 +6,8 @@
   --title: #2a2a2a;
   --subtext: #8c8c8c;
   --text-box: #545454;
-  --box-title: #f4f4f4;
-  --box-subtext: #8c8c8c;
+  --box-title: #ffffff;
+  --box-subtext: #ffffff;
   --text: #2a2a2a;
   --text-muted: #8c8c8c;
   --line: #6a6a6a;
@@ -916,7 +916,7 @@ h1 {
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: 0.02em;
-  color: #f4f4f4;
+  color: #ffffff;
 }
 
 .global-connect-map {
@@ -961,12 +961,12 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #f4f4f4;
+  color: #ffffff;
 }
 
 .global-connect-label--sub {
   font-weight: 600;
-  color: #8c8c8c;
+  color: #ffffff;
 }
 
 .global-connect-bridge {
@@ -1009,7 +1009,7 @@ h1 {
   font-weight: 700;
   line-height: 1.8;
   letter-spacing: 0.01em;
-  color: #f4f4f4;
+  color: #ffffff;
 }
 
 .challenge-solution {
@@ -1076,7 +1076,7 @@ h1 {
 
 .solution-panel-head {
   background: linear-gradient(180deg, #5e5e5e 0%, #545454 100%);
-  color: #f4f4f4;
+  color: #ffffff;
   border-bottom: 1px solid #6a6a6a;
 }
 
@@ -1124,7 +1124,7 @@ h1 {
 }
 
 .solution-list li {
-  color: #f4f4f4;
+  color: #ffffff;
 }
 
 .solution-list li:hover {
@@ -1141,7 +1141,7 @@ h1 {
 .solution-icon {
   flex: 0 0 auto;
   width: 1.25rem;
-  color: #c8d0ff;
+  color: #ffffff;
   font-weight: 700;
   font-size: 1.05rem;
   line-height: 1.55;
@@ -1888,8 +1888,8 @@ h1 {
   --title: #2a2a2a;
   --subtext: #8c8c8c;
   --text-box: #545454;
-  --box-title: #f4f4f4;
-  --box-subtext: #8c8c8c;
+  --box-title: #ffffff;
+  --box-subtext: #ffffff;
   --text: #2a2a2a;
   --text-muted: #8c8c8c;
   --line: #6a6a6a;
