@@ -305,7 +305,16 @@
               現状を伺いながら最適な進め方をご提案します。
             </p>
           </div>
-          <form class="contact-form" action="#" method="post">
+          <form
+            class="contact-form"
+            id="contact-form"
+            action="https://formsubmit.co/ajax/hello@unprologue.jp"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="N.PROLOGUE お問い合わせ" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
+            <p class="contact-form-status" id="contact-form-status" role="status" aria-live="polite"></p>
             <label>
               お名前
               <input type="text" name="name" required />

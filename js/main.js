@@ -165,3 +165,49 @@ const observer = new IntersectionObserver(
 );
 
 revealTargets.forEach((el) => observer.observe(el));
+
+const contactForm = document.getElementById("contact-form");
+const contactFormStatus = document.getElementById("contact-form-status");
+
+if (contactForm && contactFormStatus) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    if (submitButton) {
+      submitButton.disabled = true;
+    }
+
+    contactFormStatus.textContent = "送信中…";
+    contactFormStatus.classList.remove("is-error", "is-success");
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: new FormData(contactForm),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || result.success !== "true") {
+        throw new Error(result.message || "送信に失敗しました");
+      }
+
+      contactForm.reset();
+      contactFormStatus.textContent =
+        "送信しました。ご連絡ありがとうございます。";
+      contactFormStatus.classList.add("is-success");
+    } catch {
+      contactFormStatus.textContent =
+        "送信に失敗しました。時間をおいて再度お試しください。";
+      contactFormStatus.classList.add("is-error");
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+      }
+    }
+  });
+}
