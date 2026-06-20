@@ -898,6 +898,107 @@ h1 {
   color: var(--subtext);
 }
 
+.global-connect {
+  margin-top: clamp(56px, 8vw, 84px);
+  text-align: center;
+}
+
+.global-connect-title {
+  margin: 0 0 clamp(36px, 5vw, 52px);
+  font-family: "Playfair Display", "Noto Serif JP", serif;
+  font-size: clamp(1.55rem, 3.2vw, 2.15rem);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--title);
+}
+
+.global-connect-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2.5vw, 28px);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.global-connect-node {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  flex: 0 0 auto;
+}
+
+.global-connect-flag {
+  display: grid;
+  place-items: center;
+  width: clamp(72px, 10vw, 96px);
+  height: clamp(72px, 10vw, 96px);
+  border-radius: 50%;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  line-height: 1;
+}
+
+.global-connect-node--usa .global-connect-flag {
+  background: #e8e8e8;
+}
+
+.global-connect-node--japan .global-connect-flag {
+  background: #2a2a2a;
+}
+
+.global-connect-label {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--title);
+}
+
+.global-connect-label--sub {
+  color: var(--subtext);
+}
+
+.global-connect-bridge {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 80px;
+  max-width: 220px;
+  height: 48px;
+}
+
+.global-connect-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 2px dashed #bdbdbd;
+  transform: translateY(-50%);
+}
+
+.global-connect-arrow {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--subtext);
+}
+
+.global-connect-note {
+  margin: clamp(36px, 5vw, 52px) auto 0;
+  max-width: 760px;
+  padding: 22px 28px;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  background: var(--text-box);
+  font-size: clamp(0.95rem, 1.7vw, 1.05rem);
+  font-weight: 700;
+  line-height: 1.75;
+  color: var(--title);
+}
+
 .section-dark {
   background:
     radial-gradient(circle at 84% 30%, rgba(99, 162, 226, 0.14), transparent 45%),
@@ -1221,10 +1322,6 @@ h1 {
   color: var(--subtext);
 }
 
-.flow li {
-  color: var(--subtext);
-}
-
 .note {
   margin: 22px 0 0;
   color: var(--subtext);
@@ -1412,6 +1509,10 @@ h1 {
 
   h1 {
     line-height: 1.4;
+  }
+
+  .global-connect-note {
+    padding: 18px 16px;
   }
 
   .option-board {
