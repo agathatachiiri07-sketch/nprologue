@@ -131,7 +131,7 @@ if (dotLogo) {
 }
 
 const revealTargets = document.querySelectorAll(
-  ".section .section-en, .section .section-title, .section .card, .section .price-card, .section .global-connect, .section .challenge-solution, .flow li, .faq details, .contact-form, .option-board"
+  ".section .section-en, .section .section-title, .section .card, .section .price-card, .section .global-connect, .section .challenge-solution, .section .strength-features, .flow li, .faq details, .contact-form, .option-board"
 );
 
 revealTargets.forEach((el, index) => {
