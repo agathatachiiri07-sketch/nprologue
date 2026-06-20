@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>N.PROLOGUE</title>
+    <link rel="icon" href="favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <meta
       name="description"
       content="想いをカタチに、らしさをデザインに。ブランドに寄り添うWeb制作・デザインスタジオ。"
@@ -11,22 +14,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <main id="top">
-      <section class="hero">
-        <aside class="hero-side-logo" aria-label="Sidebar logo">
-          <span class="hero-side-logo-line"></span>
-          <span class="hero-side-logo-line"></span>
-          <span class="hero-side-logo-line"></span>
-        </aside>
-        <div class="container hero-grid hero-grid-minimal">
-          <h1 class="hero-title-only sr-only">N.PROLOGUE</h1>
-          <div class="dot-logo" id="dot-logo" data-text="N.PROLOGUE" aria-hidden="true"></div>
+      <section class="hero" id="hero">
+        <div class="hero-stage">
+          <div class="hero-intro" id="hero-intro">
+            <div class="dot-logo" id="dot-logo" data-text="N.PROLOGUE" aria-hidden="true"></div>
+          </div>
+
+          <div class="hero-content" id="hero-content" aria-hidden="true">
+            <div class="hero-bg-circles" aria-hidden="true">
+              <span class="hero-circle hero-circle--tl"></span>
+              <span class="hero-circle hero-circle--br"></span>
+            </div>
+            <div class="container hero-copy-wrap">
+              <p class="hero-eyebrow hero-reveal-item">
+                <span class="hero-accent">INBOUND</span> &amp; <span class="hero-accent">GLOBAL</span> READY
+              </p>
+              <h1 class="hero-headline hero-reveal-item">
+                Bring your brand<br />
+                to the <span class="hero-accent">world</span>.
+              </h1>
+              <p class="hero-lead hero-reveal-item">
+                <span class="hero-accent">インバウンド</span>と<span class="hero-accent">海外発信</span>に強い、ブランドWeb制作スタジオ。
+              </p>
+              <a href="#price" class="btn btn-hero hero-reveal-item">View Plans →</a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -55,35 +74,73 @@
             </article>
           </div>
         </div>
+
+        <div class="global-connect">
+          <div class="container global-connect-inner">
+            <h2 class="global-connect-title">Connecting Japan with the World</h2>
+
+            <div class="global-connect-map" aria-label="LA USA to Japan connection">
+              <div class="global-connect-node">
+                <div class="global-connect-circle global-connect-circle--usa">
+                  <span aria-hidden="true">🇺🇸</span>
+                </div>
+                <p class="global-connect-label global-connect-label--sub">LA / USA</p>
+              </div>
+
+              <div class="global-connect-bridge" aria-hidden="true">
+                <span class="global-connect-arrow">⇄</span>
+                <span class="global-connect-line"></span>
+              </div>
+
+              <div class="global-connect-node">
+                <div class="global-connect-circle global-connect-circle--japan">
+                  <span aria-hidden="true">🇯🇵</span>
+                </div>
+                <p class="global-connect-label">JAPAN</p>
+              </div>
+            </div>
+
+            <p class="global-connect-note">
+              LA出身メンバーが在籍。海外と日本の感性を理解した制作チーム。
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section class="section section-dark" id="strength">
+      <section class="section" id="strength">
         <div class="container">
           <p class="section-en">STRENGTH</p>
-          <h2 class="section-title">選ばれる理由</h2>
-          <div class="feature-list">
-            <article>
-              <span>01</span>
-              <h3>テンプレートに縛られない提案</h3>
-              <p>
-                事業の背景やフェーズを理解したうえで、最適な情報設計とデザインをご提案します。
-              </p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>買い切り型で透明な料金</h3>
-              <p>
-                初期費用・制作範囲を明確化。将来の運用も見据え、予算計画が立てやすい進行です。
-              </p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>公開後の運用まで伴走</h3>
-              <p>
-                納品して終わりではなく、更新体制や改善の考え方まで共有。内製化もサポートします。
-              </p>
-            </article>
+          <div class="challenge-solution">
+            <div class="challenge-solution-grid">
+              <article class="challenge-panel">
+                <header class="challenge-panel-head">事業者の課題</header>
+                <ul class="challenge-list">
+                  <li><span class="challenge-icon" aria-hidden="true">😟</span>テンプレ型は世界観が伝わらない</li>
+                  <li><span class="challenge-icon" aria-hidden="true">😟</span>フルオーダーは予算感が読めない</li>
+                  <li><span class="challenge-icon" aria-hidden="true">😟</span>海外向けの発信ノウハウがない</li>
+                  <li><span class="challenge-icon" aria-hidden="true">😟</span>月額固定費に縛られたくない</li>
+                  <li><span class="challenge-icon" aria-hidden="true">😟</span>公開後の運用に不安がある</li>
+                </ul>
+              </article>
+
+              <div class="challenge-solution-bridge" aria-hidden="true">
+                <span class="challenge-solution-arrow"></span>
+                <span class="challenge-solution-label">解決</span>
+              </div>
+
+              <article class="solution-panel">
+                <header class="solution-panel-head">N.PROLOGUE が解決</header>
+                <ul class="solution-list">
+                  <li><span class="solution-icon" aria-hidden="true">✓</span>テンプレに縛られないオリジナル設計</li>
+                  <li><span class="solution-icon" aria-hidden="true">✓</span>買い切り型30万円〜の明朗料金</li>
+                  <li><span class="solution-icon" aria-hidden="true">✓</span>LA出身メンバーで海外発信に対応</li>
+                  <li><span class="solution-icon" aria-hidden="true">✓</span>月額保守費なし</li>
+                  <li><span class="solution-icon" aria-hidden="true">✓</span>公開後の運用まで伴走</li>
+                </ul>
+              </article>
+            </div>
           </div>
+
         </div>
       </section>
 
@@ -252,7 +309,16 @@
               現状を伺いながら最適な進め方をご提案します。
             </p>
           </div>
-          <form class="contact-form" action="#" method="post">
+          <form
+            class="contact-form"
+            id="contact-form"
+            action="https://formsubmit.co/ajax/hello@unprologue.jp"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="N.PROLOGUE お問い合わせ" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
+            <p class="contact-form-status" id="contact-form-status" role="status" aria-live="polite"></p>
             <label>
               お名前
               <input type="text" name="name" required />
