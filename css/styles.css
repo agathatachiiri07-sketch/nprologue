@@ -1012,6 +1012,125 @@ h1 {
   color: #f4f4f4;
 }
 
+.challenge-solution {
+  margin-top: 8px;
+}
+
+.challenge-solution-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  gap: clamp(16px, 3vw, 28px);
+}
+
+.challenge-panel,
+.solution-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  border: 1px solid #d0d0d0;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.challenge-panel-head,
+.solution-panel-head {
+  margin: 0;
+  padding: 16px 20px;
+  text-align: center;
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.challenge-panel-head {
+  background: #e8e8e8;
+  color: #2a2a2a;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.solution-panel-head {
+  background: #545454;
+  color: #f4f4f4;
+  border-bottom: 1px solid #6a6a6a;
+}
+
+.challenge-list,
+.solution-list {
+  list-style: none;
+  margin: 0;
+  padding: clamp(18px, 3vw, 26px) clamp(16px, 2.5vw, 24px);
+  display: grid;
+  gap: 14px;
+  flex: 1;
+}
+
+.challenge-list {
+  background: #f4f4f4;
+}
+
+.challenge-list li,
+.solution-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.7;
+  font-size: clamp(0.88rem, 1.6vw, 0.98rem);
+  font-weight: 600;
+}
+
+.challenge-list li {
+  color: #2a2a2a;
+}
+
+.solution-list {
+  background: #545454;
+}
+
+.solution-list li {
+  color: #f4f4f4;
+}
+
+.challenge-icon {
+  flex: 0 0 auto;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.solution-icon {
+  flex: 0 0 auto;
+  width: 1.1rem;
+  color: #f4f4f4;
+  font-weight: 700;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.challenge-solution-bridge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 56px;
+  padding: 0 4px;
+}
+
+.challenge-solution-arrow {
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 22px solid #545454;
+}
+
+.challenge-solution-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #2a2a2a;
+}
+
 .section-dark {
   background: transparent;
 }
@@ -1523,6 +1642,26 @@ h1 {
 
   h1 {
     line-height: 1.4;
+  }
+
+  .challenge-solution-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .challenge-solution-bridge {
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 4px 0;
+  }
+
+  .challenge-solution-arrow {
+    border-top: 18px solid #545454;
+    border-right: 14px solid transparent;
+    border-left: 14px solid transparent;
+    border-bottom: 0;
   }
 
   .global-connect {
