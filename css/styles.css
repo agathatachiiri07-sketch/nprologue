@@ -66,10 +66,10 @@ a {
   justify-content: center;
   padding: 96px 0;
   transition:
-    opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
-    filter 0.45s ease,
-    visibility 0s linear 0.55s;
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0.6s;
 }
 
 .hero-content {
@@ -79,18 +79,18 @@ a {
   display: flex;
   align-items: center;
   opacity: 0;
-  transform: translateY(48px) scale(0.96);
+  transform: translateY(32px) scale(0.97);
   pointer-events: none;
   transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.06s,
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.06s;
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.08s,
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.08s;
 }
 
 .hero.is-revealed .hero-intro {
   opacity: 0;
   visibility: hidden;
-  transform: scale(0.86) translateY(-28px);
-  filter: blur(14px);
+  transform: scale(0.94) translateY(-16px);
+  filter: blur(8px);
   pointer-events: none;
   z-index: 0;
 }
@@ -104,12 +104,12 @@ a {
 
 .hero-reveal-item {
   opacity: 0;
-  transform: translateY(36px);
-  filter: blur(4px);
+  transform: translateY(24px);
+  filter: blur(3px);
   transition:
-    opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.45s ease;
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hero.is-revealed .hero-reveal-item {
@@ -1781,46 +1781,59 @@ h1 {
     padding: 64px 0;
   }
 
-  .hero:not(.is-revealed) .hero-content {
+  .hero-content {
+    transform: translateY(20px) scale(0.98);
+  }
+
+  .hero:not(.is-revealed) .hero-content,
+  .hero.is-revealed:not(.is-settled) .hero-content {
     position: absolute;
     inset: 0;
     min-height: 0;
+  }
+
+  .hero:not(.is-revealed) .hero-content {
     visibility: hidden;
   }
 
-  .hero.is-revealed .hero-stage,
   .hero.is-revealed .hero-content {
-    min-height: auto;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s,
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s,
+      visibility 0s;
   }
 
-  .hero.is-revealed .hero-content {
+  .hero.is-settled .hero-content {
     position: relative;
-    visibility: visible;
-    transition-delay: 0.38s;
+    min-height: auto;
   }
 
   .hero.is-revealed .hero-intro {
     transition:
-      opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-      filter 0.3s ease,
-      visibility 0s linear 0.35s;
+      opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0s linear 0.55s;
+    transform: scale(0.96) translateY(-8px);
+    filter: blur(6px);
   }
 
   .hero.is-revealed .hero-reveal-item:nth-child(1) {
-    transition-delay: 0.46s;
+    transition-delay: 0.22s;
   }
 
   .hero.is-revealed .hero-reveal-item:nth-child(2) {
-    transition-delay: 0.54s;
+    transition-delay: 0.3s;
   }
 
   .hero.is-revealed .hero-reveal-item:nth-child(3) {
-    transition-delay: 0.62s;
+    transition-delay: 0.38s;
   }
 
   .hero.is-revealed .hero-reveal-item:nth-child(4) {
-    transition-delay: 0.7s;
+    transition-delay: 0.46s;
   }
 
   .hero-copy-wrap {

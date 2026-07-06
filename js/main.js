@@ -2,6 +2,14 @@ const dotLogo = document.getElementById("dot-logo");
 const hero = document.getElementById("hero");
 const heroContent = document.getElementById("hero-content");
 
+const settleHeroLayout = () => {
+  if (!hero) {
+    return;
+  }
+
+  hero.classList.add("is-settled");
+};
+
 const revealHero = () => {
   if (!hero) {
     return;
@@ -11,6 +19,14 @@ const revealHero = () => {
 
   if (heroContent) {
     heroContent.setAttribute("aria-hidden", "false");
+  }
+
+  if (window.matchMedia("(max-width: 760px)").matches) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      settleHeroLayout();
+    } else {
+      window.setTimeout(settleHeroLayout, 820);
+    }
   }
 };
 
@@ -116,7 +132,7 @@ if (dotLogo) {
   const typeNext = () => {
     if (currentIndex >= letters.length) {
       dotLogo.classList.remove("is-typing");
-      window.setTimeout(revealHero, 380);
+      window.setTimeout(revealHero, 420);
       return;
     }
 
