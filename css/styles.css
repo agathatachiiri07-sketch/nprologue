@@ -66,10 +66,10 @@ a {
   justify-content: center;
   padding: 96px 0;
   transition:
-    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-    visibility 0s linear 0.6s;
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0.9s;
 }
 
 .hero-content {
@@ -79,18 +79,18 @@ a {
   display: flex;
   align-items: center;
   opacity: 0;
-  transform: translateY(32px) scale(0.97);
+  transform: translateY(40px) scale(0.96);
   pointer-events: none;
   transition:
-    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.08s,
-    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.08s;
+    opacity 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.15s,
+    transform 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
 }
 
 .hero.is-revealed .hero-intro {
   opacity: 0;
   visibility: hidden;
-  transform: scale(0.94) translateY(-16px);
-  filter: blur(8px);
+  transform: scale(0.92) translateY(-20px);
+  filter: blur(10px);
   pointer-events: none;
   z-index: 0;
 }
@@ -104,12 +104,12 @@ a {
 
 .hero-reveal-item {
   opacity: 0;
-  transform: translateY(24px);
-  filter: blur(3px);
+  transform: translateY(28px);
+  filter: blur(4px);
   transition:
-    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hero.is-revealed .hero-reveal-item {
@@ -119,19 +119,19 @@ a {
 }
 
 .hero.is-revealed .hero-reveal-item:nth-child(1) {
-  transition-delay: 0.18s;
+  transition-delay: 0.32s;
 }
 
 .hero.is-revealed .hero-reveal-item:nth-child(2) {
-  transition-delay: 0.28s;
+  transition-delay: 0.46s;
 }
 
 .hero.is-revealed .hero-reveal-item:nth-child(3) {
-  transition-delay: 0.38s;
+  transition-delay: 0.6s;
 }
 
 .hero.is-revealed .hero-reveal-item:nth-child(4) {
-  transition-delay: 0.48s;
+  transition-delay: 0.74s;
 }
 
 .hero-bg-circles {
@@ -146,10 +146,10 @@ a {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.06);
   opacity: 0;
-  transform: scale(0.88);
+  transform: scale(0.82);
   transition:
-    opacity 0.75s ease 0.08s,
-    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.08s;
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s,
+    transform 1.15s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
 }
 
 .hero.is-revealed .hero-circle {
@@ -1790,7 +1790,7 @@ h1 {
   }
 
   .hero-content {
-    transform: translateY(20px) scale(0.98);
+    transform: translateY(28px) scale(0.97);
     align-items: center;
   }
 
@@ -1809,8 +1809,8 @@ h1 {
     visibility: visible;
     transform: translateY(0) scale(1);
     transition:
-      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s,
-      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s,
+      opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.18s,
+      transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.18s,
       visibility 0s;
   }
 
@@ -1821,28 +1821,28 @@ h1 {
 
   .hero.is-revealed .hero-intro {
     transition:
-      opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
-      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
-      filter 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-      visibility 0s linear 0.55s;
-    transform: scale(0.96) translateY(-8px);
-    filter: blur(6px);
+      opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      visibility 0s linear 0.8s;
+    transform: scale(0.94) translateY(-12px);
+    filter: blur(8px);
   }
 
   .hero.is-revealed .hero-reveal-item:nth-child(1) {
-    transition-delay: 0.22s;
+    transition-delay: 0.36s;
   }
 
   .hero.is-revealed .hero-reveal-item:nth-child(2) {
-    transition-delay: 0.3s;
+    transition-delay: 0.5s;
   }
 
   .hero.is-revealed .hero-reveal-item:nth-child(3) {
-    transition-delay: 0.38s;
+    transition-delay: 0.64s;
   }
 
   .hero.is-revealed .hero-reveal-item:nth-child(4) {
-    transition-delay: 0.46s;
+    transition-delay: 0.78s;
   }
 
   .hero-copy-wrap {

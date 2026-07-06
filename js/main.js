@@ -2,6 +2,8 @@ const dotLogo = document.getElementById("dot-logo");
 const hero = document.getElementById("hero");
 const heroContent = document.getElementById("hero-content");
 
+const HERO_SETTLE_MS = 1300;
+
 const settleHeroLayout = () => {
   if (!hero) {
     return;
@@ -25,7 +27,7 @@ const revealHero = () => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       settleHeroLayout();
     } else {
-      window.setTimeout(settleHeroLayout, 820);
+      window.setTimeout(settleHeroLayout, HERO_SETTLE_MS);
     }
   }
 };
@@ -123,7 +125,7 @@ if (dotLogo) {
   dotLogo.innerHTML = "";
   dotLogo.classList.add("is-typing");
 
-  const typingStepMs = 220;
+  const typingStepMs = 260;
   const letters = [...text]
     .map((char) => buildLetter(char))
     .filter((letter) => letter !== null);
@@ -132,7 +134,7 @@ if (dotLogo) {
   const typeNext = () => {
     if (currentIndex >= letters.length) {
       dotLogo.classList.remove("is-typing");
-      window.setTimeout(revealHero, 420);
+      window.setTimeout(revealHero, 560);
       return;
     }
 
