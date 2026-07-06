@@ -1786,12 +1786,12 @@ h1 {
   }
 
   .hero-intro {
-    padding: 64px 0;
+    padding: 64px 20px;
   }
 
   .hero-content {
     transform: translateY(20px) scale(0.98);
-    align-items: flex-start;
+    align-items: center;
   }
 
   .hero:not(.is-revealed) .hero-content,
@@ -1847,6 +1847,7 @@ h1 {
 
   .hero-copy-wrap {
     padding: clamp(72px, 12svh, 92px) 0 clamp(36px, 6svh, 48px);
+    text-align: center;
   }
 
   .hero-eyebrow {
@@ -1859,6 +1860,7 @@ h1 {
     font-size: clamp(2.05rem, 8.8vw, 2.55rem);
     line-height: 1.22;
     max-width: 10.5em;
+    margin-inline: auto;
   }
 
   .hero-headline .hero-accent {
@@ -1875,6 +1877,7 @@ h1 {
 
   .hero-lead {
     margin-top: 22px;
+    margin-inline: auto;
     font-size: 0.95rem;
     line-height: 1.75;
   }
@@ -1882,6 +1885,7 @@ h1 {
   .btn-hero {
     margin-top: 28px;
     padding: 14px 28px;
+    display: inline-flex;
   }
 
   .hero-circle--tl {
@@ -1991,9 +1995,17 @@ h1 {
   }
 
   .dot-logo {
-    --dot-size: clamp(5px, 1.45vw, 8px);
-    --dot-gap: clamp(4px, 0.95vw, 6px);
-    gap: clamp(9px, 1.9vw, 16px);
+    --dot-size: clamp(3.5px, 0.95vw, 5.5px);
+    --dot-gap: clamp(2.5px, 0.6vw, 4px);
+    gap: clamp(5px, 1.1vw, 9px);
+    max-width: 100%;
+    transform: scale(0.9);
+    transform-origin: center center;
+  }
+
+  .dot-logo::after {
+    width: clamp(3px, 0.45vw, 5px);
+    margin-left: clamp(5px, 0.8vw, 9px);
   }
 
   .reveal,
